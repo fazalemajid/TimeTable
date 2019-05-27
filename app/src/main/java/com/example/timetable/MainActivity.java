@@ -23,12 +23,6 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
-    Map<String, Map> timeTable;
-    Map<String, List> buildingOne;
-    Map<String, List> buildingTwo;
-    Map<String, List> buildingThree;
-    List<String> day;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,102 +39,6 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        day = new ArrayList<String>();
-        timeTable = new HashMap<String, Map>();
-        buildingOne = new HashMap<String, List>();
-
-        day.add(0, "CS | OOP");
-        day.add(1,"ME | Mechanics");
-        day.add(3,"BBA | Management");
-        buildingOne.put("Monday", day);
-        day.clear();
-
-        day.add(1, "CE | Algebra");
-        day.add(2,"SE | PPIT");
-        day.add(3,"EE | Electronics");
-        buildingOne.put("Tuesday", day);
-        day.clear();
-
-        day.add(0, "BBA | Management");
-        day.add(2,"SE | PPIT");
-        buildingOne.put("Wednesday", day);
-        day.clear();
-
-        day.add(0, "CE | Algebra");
-        day.add(1,"CS | OOP");
-        day.add(2,"ME | Mechanics");
-        day.add(3,"EE | Electronics");
-        buildingOne.put("Tursday", day);
-        day.clear();
-
-        day.add(0, "SE | SE-1");
-        day.add(1,"CS | Database");
-        day.add(3,"ME | Rebotics");
-        buildingOne.put("Friday", day);
-        day.clear();
-
-        //building two
-        day.add(0, "EE | DLD");
-        day.add(2,"CE | ODE");
-        day.add(3,"BBA | HR");
-        buildingTwo.put("Monday", day);
-        day.clear();
-// left here
-        day.add(0, "CS | Databases");
-        day.add(1, "CE | Algebra");
-        day.add(2,"SE | PPIT");
-        day.add(3,"EE | Electronics");
-        buildingTwo.put("Tuesday", day);
-        day.clear();
-
-        day.add(2,"SE | PPIT");
-        buildingTwo.put("Wednesday", day);
-        day.clear();
-
-        day.add(0, "CE | Algebra");
-        day.add(1,"CS | OOP");
-        day.add(2,"ME | Mechanics");
-        day.add(3,"EE | Electronics");
-        buildingTwo.put("Tursday", day);
-        day.clear();
-
-        day.add(0, "SE | SE-1");
-        day.add(1,"CS | Database");
-        day.add(3,"ME | Rebotics");
-        buildingTwo.put("Friday", day);
-        day.clear();
-
-        //building three
-        day.add(0, "CS | OOP");
-        day.add(1,"ME | Mechanics");
-        day.add(3,"BBA | Management");
-        buildingThree.put("Monday", day);
-        day.clear();
-
-        day.add(1, "CE | Algebra");
-        day.add(2,"SE | PPIT");
-        day.add(3,"EE | Electronics");
-        buildingThree.put("Tuesday", day);
-        day.clear();
-
-        day.add(0, "BBA | Management");
-        day.add(2,"SE | PPIT");
-        buildingThree.put("Wednesday", day);
-        day.clear();
-
-        day.add(0, "CE | Algebra");
-        day.add(1,"CS | OOP");
-        day.add(2,"ME | Mechanics");
-        day.add(3,"EE | Electronics");
-        buildingThree.put("Tursday", day);
-        day.clear();
-
-        day.add(0, "SE | SE-1");
-        day.add(1,"CS | Database");
-        day.add(3,"ME | Rebotics");
-        buildingThree.put("Friday", day);
-        day.clear();
 
         Button cs = findViewById(R.id.btn_cs);
         cs.setOnClickListener(this);
